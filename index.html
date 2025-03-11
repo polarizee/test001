@@ -13,8 +13,20 @@
             font-weight: 900;
             text-transform: uppercase;
             margin-bottom: 20px;
-            text-shadow: 0 0 9px rgba(255, 107, 129, 0.7);
+            text-shadow: 0 0 30px rgba(255, 107, 129, 0.7);
             text-align: center; /* Центрируем надпись */
+        }
+
+        .balance {
+            font-size: 1.5rem;
+            color: #ffffff; /* Белый цвет для баланса */
+            margin-bottom: 30px;
+            text-align: center; /* Центрируем баланс */
+        }
+
+        .balance span {
+            font-weight: bold;
+            color: #81ff6b; /* Зеленый цвет для суммы баланса */
         }
 
         .button-row {
@@ -72,10 +84,10 @@
             <button class="button majestic" onclick="window.location.href='majestic.html'">Majestic</button>
             <button class="button gta5rp" onclick="window.location.href='gta5rp.html'">GTA 5 RP</button>
         </div>
-        <button class="button topup" onclick="openPage('topup')">Пополнить баланс</button>
+        <button class="button topup" onclick="openTopUpModal()">Пополнить баланс</button>
     </div>
 
-<!-- Модальное окно для пополнения баланса -->
+    <!-- Модальное окно для пополнения баланса -->
     <div id="topUpModal" class="modal">
         <div class="modal-content">
             <h2>Пополнение баланса</h2>
@@ -84,10 +96,14 @@
             <label for="username">Ваш Telegram username:</label>
             <input type="text" id="username" placeholder="Введите ваш username">
             <p>Реквизиты для оплаты: Альфа Банк, Номер карты: <strong>2200152985325359</strong></p>
-            <button onclick="submitTopUpRequest()">Отправить заявку</button>
+            <div class="modal-buttons">
+                <button class="modal-button confirm" onclick="submitTopUpRequest()">Отправить заявку</button>
+                <button class="modal-button cancel" onclick="closeModal('topUpModal')">Закрыть</button>
+            </div>
         </div>
     </div>
 
     <script src="script.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>

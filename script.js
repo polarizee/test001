@@ -39,7 +39,7 @@ async function submitTopUpRequest() {
 
     // Отправляем заявку на сервер
     try {
-        const response = await fetch('https://test001-iota.vercel.app', {
+        const response = await fetch('https://your-app.vercel.app/submitTopUpRequest', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -107,17 +107,10 @@ function showNotification(message) {
     openModal('notificationModal');
 }
 
+// Инициализация Telegram Mini Apps
+Telegram.WebApp.ready();
+
 // Загрузка данных при открытии страницы
 window.onload = function () {
-    if (window.location.pathname.includes('purchase.html')) {
-        // Загружаем выбранный сервер
-        selectedServer = localStorage.getItem('selectedServer');
-        document.getElementById('selected-server').textContent = selectedServer;
-
-        // Обновляем баланс
-        updateBalance();
-
-        // Скрываем блок выбранного количества виртов, если ничего не выбрано
-        document.getElementById('selected-amount-info').style.display = 'none';
-    }
+    updateBalance(); // Обновляем баланс при загрузке страницы
 };

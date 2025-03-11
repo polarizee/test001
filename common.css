@@ -87,7 +87,7 @@ body {
     color: #ff6b81;
 }
 
-/* Стили для модальных окон */
+/* Стили для модального окна */
 .modal {
     display: none;
     position: fixed;
@@ -107,6 +107,56 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
-    top: -10%; /* Сдвигаем модальное окно чуть выше */
+    width: 90%;
+    max-width: 400px;
+}
+
+.modal-content h2 {
+    color: #ff6b81;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: opacity 0.3s ease;
+}
+
+.modal-button.confirm {
+    background: linear-gradient(45deg, #81ff6b, #57ff47);
+    color: #fff;
+}
+
+.modal-button.cancel {
+    background: linear-gradient(45deg, #ff6b81, #ff4757);
+    color: #fff;
+}
+
+.modal-button:hover {
+    opacity: 0.9;
 }
