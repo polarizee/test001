@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
 
 BOT_TOKEN = "7903279898:AAFH7RX-Cydt2nQkWHsCrL1lIiTcsZ6DeRQ"  # Вставьте токен бота
-MINI_APP_URL = "test001-iota.vercel.app"  # Убедитесь, что ссылка начинается с https://
+MINI_APP_URL = "https://test001-iota.vercel.app"  # Убедитесь, что ссылка начинается с https://
 
 # Функция для сохранения chat_id в файл
 def save_user(chat_id):
