@@ -4,77 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GTAVIRTSHOP</title>
-    <link rel="stylesheet" href="common.css"> <!-- Общие стили -->
-    <style>
-        /* Уникальные стили для главной страницы */
-        .shop-title {
-            color: #ff6b81;
-            font-size: 3rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-            text-shadow: 0 0 30px rgba(255, 107, 129, 0.7);
-            text-align: center; /* Центрируем надпись */
-        }
-
-        .balance {
-            font-size: 1.5rem;
-            color: #ffffff; /* Белый цвет для баланса */
-            margin-bottom: 30px;
-            text-align: center; /* Центрируем баланс */
-        }
-
-        .balance span {
-            font-weight: bold;
-            color: #81ff6b; /* Зеленый цвет для суммы баланса */
-        }
-
-        .button-row {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
-        }
-
-        .button.majestic {
-            background: linear-gradient(45deg, #ff6b81, #ff4757);
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            border-radius: 10px;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .button.gta5rp {
-            background: linear-gradient(45deg, #6b81ff, #4757ff);
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            border-radius: 10px;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .button.topup {
-            background: linear-gradient(45deg, #81ff6b, #57ff47);
-            font-size: 1.2rem;
-            padding: 15px 30px;
-            border-radius: 10px;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 250px;
-        }
-
-        .button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
-        }
-    </style>
+    <link rel="stylesheet" href="common.css">
 </head>
 <body>
     <div class="container">
@@ -92,10 +22,11 @@
         <div class="modal-content">
             <h2>Пополнение баланса</h2>
             <label for="amount">Выберите сумму (₽):</label>
-            <input type="number" id="amount" placeholder="Введите сумму" min="1">
+            <input type="number" id="amount" placeholder="Введите сумму" min="1000">
             <label for="username">Ваш Telegram username:</label>
             <input type="text" id="username" placeholder="Введите ваш username">
             <p>Реквизиты для оплаты: Альфа Банк, Номер карты: <strong>2200152985325359</strong></p>
+            <p><strong>Отправьте точную сумму, которую вы указали!</strong></p>
             <div class="modal-buttons">
                 <button class="modal-button confirm" onclick="submitTopUpRequest()">Отправить заявку</button>
                 <button class="modal-button cancel" onclick="closeModal('topUpModal')">Закрыть</button>
