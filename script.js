@@ -39,7 +39,7 @@ async function submitTopUpRequest() {
 
     // Отправляем заявку на сервер
     try {
-        const response = await fetch('https://вашсервер.com/submitTopUpRequest', {
+        const response = await fetch('https://test001-iota.vercel.app', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
