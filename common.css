@@ -1,0 +1,112 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    top: -10%; /* Сдвигаем контейнер чуть выше */
+}
+
+.page-title {
+    color: #ff6b81;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.balance {
+    font-size: 1.5rem;
+    color: #ffffff; /* Белый цвет для баланса */
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.balance span {
+    color: #ffffff; /* Белый цвет для суммы баланса */
+}
+
+.server-list, .amount-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.server-button, .amount-button, .pay-button, .back-button {
+    background-color: #ff6b81;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.server-button:hover, .amount-button:hover, .pay-button:hover, .back-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.pay-button {
+    background: linear-gradient(45deg, #81ff6b, #57ff47);
+    width: 100%;
+    margin-top: 15px;
+}
+
+.back-button {
+    background: linear-gradient(45deg, #6b81ff, #4757ff);
+    width: 100%;
+    margin-top: 15px;
+}
+
+#payment-status {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #ff6b81;
+}
+
+#selected-amount {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #ff6b81;
+}
+
+/* Стили для модальных окон */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: -10%; /* Сдвигаем модальное окно чуть выше */
+}
